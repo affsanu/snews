@@ -19,10 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(
-        "h-screen w-full bg-main-bg-img bg-cover bg-fixed",
-        
-      )}>
+      <body className={`
+        h-screen w-full bg-main-bg-img bg-cover bg-fixed
+        ${inter.className}`}>
         <NavMenu />
         <NewsBar />
         {children}
