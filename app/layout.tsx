@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(
         "h-screen w-full bg-main-bg-img bg-cover bg-fixed",
-        inter.className
+        
       )}>
         <NavMenu />
         <NewsBar />
