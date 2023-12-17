@@ -13,10 +13,10 @@ const Links = [
 
 const NewsBar = () => {
     return (
-        <div className='max-w-full mx-96 h-12 bg-gradient-to-l from-slate-800 via-slate-700 to bg-slate-800 shadow-2xl'>
+        <div className='max-w-7xl mx-auto h-12 bg-gradient-to-l from-slate-800 via-slate-700 to bg-slate-800 shadow-2xl'>
             <div className='h-full flex justify-between items-center px-8'>
                 <div className='flex items-center gap-6 w-full h-full'>
-                    <div className='h-full w-32 bg-slate-700 flex items-center justify-center text-slate-100 font-light'>
+                    <div className='h-full w-32 bg-slate-700 flex items-center justify-center text-slate-100 text-sm font-light'>
                         Breaking News
                     </div>
                     <div>

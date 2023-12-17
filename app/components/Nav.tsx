@@ -20,26 +20,9 @@ const Links = [
 
 const NavMenu = () => {
     const pathname = usePathname();
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            setIsScrolled(scrollTop > 0);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     const active = "text-sky-500 border-b-4 border-sky-500 inline-block"
     return (
-        <div className={`max-w-full mx-96 sticky h-32 bg-gradient-to-l from-slate-950 via-slate-900 to bg-slate-950 shadow-2xl
-        ${isScrolled ? "mt-0" : "mt-6"}
-        `}>
+        <div className={`max-w-7xl mx-auto sticky z-50 mt-6 h-32 bg-gradient-to-l from-slate-950 via-slate-900 to bg-slate-950 shadow-2xl`}>
             <div className='flex w-full h-full items-center justify-between px-6 text-white'>
                 <div className='flex items-center gap-8'>
                     <Link href={"/"}>
@@ -51,7 +34,7 @@ const NavMenu = () => {
                             className='w-full h-full object-cover object-center'
                         />
                     </Link>
-                    <div className='flex items-center gap-6 text-lg uppercase font-bold'>
+                    <div className='flex items-center gap-6 text-md uppercase font-bold'>
                         {Links.map((link, index) => (
                             <Link key={index} href={link.url} className={`${pathname === link.url && active}`}>
                                 {link.name}
