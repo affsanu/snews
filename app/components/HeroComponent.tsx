@@ -5,7 +5,7 @@ type Props = {}
 const HeroComponent = (props: Props) => {
     return (
         <div className='flex flex-col'>
-            <span className='font-bold pb-2'>
+            <span className='font-bold pb-2 text-white'>
                 Most Recent
             </span>
             <div className='grid grid-cols-1 md:grid-cols-3 w-full h-[220px] md:gap-1 space-y-1 md:space-y-0'>

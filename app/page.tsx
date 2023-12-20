@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import HeroComponent from './components/HeroComponent'
-import { Heart, Share2 } from 'lucide-react'
+import { Heart, Play, Share2 } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -21,10 +21,10 @@ export default function Home() {
           />
           <div className='absolute right-3 top-3 flex flex-col gap-2'>
             <span className='bg-black p-1.5 rounded-md cursor-pointer hover:bg-sky-400 duration-300'>
-              <Heart className='h-6 w-6 text-white hover:text-black' />
+              <Heart className='h-5 w-5 text-white hover:text-black' />
             </span>
             <span className='bg-black p-1.5 rounded-md cursor-pointer hover:bg-sky-400 duration-300'>
-              <Share2 className='h-6 w-6 text-white hover:text-black' />
+              <Share2 className='h-5 w-5 text-white hover:text-black' />
             </span>
           </div>
           <span className='absolute top-2 md:top-4 left-2 md:left-4  bg-sky-400 text-white text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 flex justify-center items-center rounded-md font-semibold'>
@@ -39,8 +39,21 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <div className='col-span-1'>
-          one
+        <div className='col-span-1 flex flex-col gap-4'>
+          <div className='flex items-center gap-2 text-white'>
+            <Play className='w-8 h-8'/>
+            <div className='flex flex-col'>
+              <span>
+                Most Readed
+              </span>
+              <span className='text-xs'>
+                2/6 News
+              </span>
+            </div>
+          </div>
+          <div>
+            abc
+          </div>
         </div>
       </div>
     </div>
