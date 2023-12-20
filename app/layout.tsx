@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Noto_Sans_Bengali } from 'next/font/google'
 import './globals.css'
-import { cn } from '@/lib/utils'
 import NavMenu from './components/Nav'
 import NewsBar from './components/News'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Noto_Sans_Bengali({ subsets: ['latin'], weight: ["200", "400", "600"] })
 
 export const metadata: Metadata = {
   title: 'Saidpur News',

@@ -2,13 +2,13 @@
 
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from 'next/link';
+import TypewriterEff from './TypewriterEff';
 
 const Links = [
-    { name: "All Videos", url: "/videos" },
-    { name: "Authors", url: "/author" },
-    { name: "Site Map", url: "/map" },
-    { name: "About Us", url: "/about" },
-    { name: "Contact Us", url: "/contact" },
+    { name: "ভিডিও", url: "/videos" },
+    { name: "লেখক", url: "/author" },
+    { name: "আমাদের সম্পর্কে", url: "/about" },
+    { name: "যোগাযোগ", url: "/contact" },
 ];
 
 const NewsBar = () => {
@@ -16,11 +16,11 @@ const NewsBar = () => {
         <div className='max-w-7xl mx-auto h-8 bg-gradient-to-l from-slate-800 via-slate-700 to bg-slate-800 shadow-2xl'>
             <div className='h-full flex justify-between items-center px-8'>
                 <div className='flex items-center gap-6 w-full h-full'>
-                    <div className='h-full w-32 bg-slate-700 flex items-center justify-center text-slate-100 text-sm font-light'>
-                        Breaking News
+                    <div className='h-full w-28 bg-slate-700 flex items-center justify-center text-sky-500 text-sm font-bold'>
+                        সর্বশেষ
                     </div>
                     <div>
-                        abc
+                        <TypewriterEff />
                     </div>
                 </div>
 
