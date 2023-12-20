@@ -20,21 +20,21 @@ const Links = [
 
 const NavMenu = () => {
     const pathname = usePathname();
-    const active = "text-sky-500 border-b-4 border-sky-500 inline-block"
+    const active = "text-sky-500 border-b-4 border-sky-500"
     return (
-        <div className={`max-w-7xl mx-auto sticky z-50 mt-6 h-32 bg-gradient-to-l from-slate-950 via-slate-900 to bg-slate-950 shadow-2xl`}>
+        <div className={`max-w-7xl mx-auto sticky z-50 mt-6 h-24 bg-gradient-to-l from-slate-950 via-slate-900 to bg-slate-950 shadow-2xl`}>
             <div className='flex w-full h-full items-center justify-between px-6 text-white'>
                 <div className='flex items-center gap-8'>
                     <Link href={"/"}>
                         <Image
                             src={logo}
                             alt='logo'
-                            width={200}
-                            height={200}
+                            width={150}
+                            height={150}
                             className='w-full h-full object-cover object-center'
                         />
                     </Link>
-                    <div className='flex items-center gap-6 text-md uppercase font-bold'>
+                    <div className='flex items-center gap-6 text-sm uppercase font-semibold'>
                         {Links.map((link, index) => (
                             <Link key={index} href={link.url} className={`${pathname === link.url && active}`}>
                                 {link.name}
@@ -43,12 +43,12 @@ const NavMenu = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-4'>
-                    <Button className='bg-sky-500 p-6 rounded-full text-md'>
+                    <Button className='bg-sky-500 p-5 rounded-full text-sm'>
                         Watch now
                     </Button>
-                    <CircleUserRound />
-                    <Menu />
-                    <Search />
+                    <CircleUserRound className='w-6 h-6'/>
+                    <Menu  className='w-6 h-6'/>
+                    <Search  className='w-6 h-6'/>
                 </div>
             </div>
         </div>
