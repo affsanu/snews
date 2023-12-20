@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { CircleUserRound, Grip, Menu, Search } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Logo from './Logo';
 
 
 const Links = [
@@ -25,9 +26,7 @@ const NavMenu = () => {
             <div className='flex w-full h-full items-center justify-between px-2 md:px-6 text-white'>
                 <div className='flex items-center gap-8'>
                     <Link href={"/"}>
-                        <div className='flex items-center text-lg md:text-xl font-extrabold'>
-                            <span>সৈয়দপুর</span>
-                        </div>
+                        <Logo />
                     </Link>
                     <div className='items-center gap-6 text-sm uppercase font-semibold hidden sm:flex'>
                         {Links.map((link, index) => (
