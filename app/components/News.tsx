@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Zap } from 'lucide-react'
 import Link from 'next/link';
 import TypewriterEff from './TypewriterEff';
 
@@ -14,17 +14,22 @@ const Links = [
 const NewsBar = () => {
     return (
         <div className='max-w-7xl mx-auto h-8 bg-gradient-to-l from-slate-800 via-slate-700 to bg-slate-800 shadow-2xl'>
-            <div className='h-full flex justify-between items-center px-8'>
+            <div className='h-full flex justify-between items-center px-4 md:px-8'>
                 <div className='flex items-center gap-6 w-full h-full'>
-                    <div className='h-full w-28 bg-slate-700 flex items-center justify-center text-sky-500 text-sm font-bold'>
-                        সর্বশেষ
+                    <div className='h-full md:w-28 bg-slate-700 flex items-center justify-center text-sky-500 text-sm font-bold'>
+                        <span className='hidden sm:block'>
+                            সংবাদ শিরোনাম
+                        </span>
+                        <span className='md:hidden px-1'>
+                            <Zap className='w-5 h-5' />
+                        </span>
                     </div>
                     <div>
                         <TypewriterEff />
                     </div>
                 </div>
 
-                <div className='flex items-center justify-end h-full w-full gap-4'>
+                <div className='items-center justify-end h-full w-full gap-4 hidden md:flex'>
                     <div className='flex gap-2'>
                         <span className='border flex items-center justify-center p-1 border-slate-500 rounded-sm hover:bg-black/30 cursor-pointer duration-300'>
                             <ChevronLeft className='w-4 h-4 text-slate-400' />
