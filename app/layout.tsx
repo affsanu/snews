@@ -3,6 +3,7 @@ import { Noto_Sans_Bengali } from 'next/font/google'
 import './globals.css'
 import NavMenu from './components/Nav'
 import NewsBar from './components/News'
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Noto_Sans_Bengali({ subsets: ['latin'], weight: ["200", "400", "600"] })
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <NavMenu />
         <NewsBar />
         {children}
+        <Analytics />
       </body>
     </html>
   )

@@ -2,6 +2,34 @@ import Image from 'next/image'
 import HeroComponent from './components/HeroComponent'
 import { Heart, Play, Share2 } from 'lucide-react'
 
+const newses = [
+  {
+    img: "https://images.prothomalo.com/prothomalo-bangla%2F2023-12%2F40743360-b5f9-4e33-b6b6-b887f32e1336%2FCorona.webp?rect=0%2C34%2C640%2C360&auto=format%2Ccompress&fmt=webp&format=webp&w=640&dpr=1.0",
+    label: "বিশ্বজুড়ে দ্রুত ছড়াচ্ছে করোনার জেএন.১ ধরন: ডব্লিউএইচও",
+    date: "২১ ডিসেম্বর ২০২৩"
+  },
+  {
+    img: "https://images.prothomalo.com/prothomalo-bangla%2F2023-12%2F6e804be7-b9c4-4807-854b-11bb79d09979%2F6.jpg?rect=0%2C0%2C3500%2C1969&auto=format%2Ccompress&fmt=webp&format=webp&w=640&dpr=1.0",
+    label: "রোলেক্সের ১০ কোটি ডলার জরিমানা",
+    date: "২০ ডিসেম্বর ২০২৩"
+  },
+  {
+    img: "https://images.prothomalo.com/prothomalo-bangla%2F2023-12%2F40743360-b5f9-4e33-b6b6-b887f32e1336%2FCorona.webp?rect=0%2C34%2C640%2C360&auto=format%2Ccompress&fmt=webp&format=webp&w=640&dpr=1.0",
+    label: "বিশ্বজুড়ে দ্রুত ছড়াচ্ছে করোনার জেএন.১ ধরন: ডব্লিউএইচও",
+    date: "২১ ডিসেম্বর ২০২৩"
+  },
+  {
+    img: "https://images.prothomalo.com/prothomalo-bangla%2F2023-12%2F40743360-b5f9-4e33-b6b6-b887f32e1336%2FCorona.webp?rect=0%2C34%2C640%2C360&auto=format%2Ccompress&fmt=webp&format=webp&w=640&dpr=1.0",
+    label: "বিশ্বজুড়ে দ্রুত ছড়াচ্ছে করোনার জেএন.১ ধরন: ডব্লিউএইচও",
+    date: "২১ ডিসেম্বর ২০২৩"
+  },
+  {
+    img: "https://images.prothomalo.com/prothomalo-bangla%2F2023-12%2F40743360-b5f9-4e33-b6b6-b887f32e1336%2FCorona.webp?rect=0%2C34%2C640%2C360&auto=format%2Ccompress&fmt=webp&format=webp&w=640&dpr=1.0",
+    label: "বিশ্বজুড়ে দ্রুত ছড়াচ্ছে করোনার জেএন.১ ধরন: ডব্লিউএইচও",
+    date: "২১ ডিসেম্বর ২০২৩"
+  },
+]
+
 export default function Home() {
   return (
     <div className='max-w-7xl mx-auto h-full justify-center text-slate-400 bg-slate-900'>
@@ -41,7 +69,7 @@ export default function Home() {
         </div>
         <div className='col-span-1 flex flex-col gap-4'>
           <div className='flex items-center gap-2 text-white'>
-            <Play className='w-8 h-8'/>
+            <Play className='w-8 h-8' />
             <div className='flex flex-col'>
               <span>
                 Most Readed
@@ -51,8 +79,29 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div>
-            abc
+          <div className='flex flex-col space-y-2'>
+            {newses.map((news, index) => (
+              <div key={index} className='flex gap-2 p-2 bg-slate-950'>
+                <div className='shadow-sm'>
+                  <Image
+                    src={news.img}
+                    alt='imgalt'
+                    width={150}
+                    height={150}
+                    className='object-cover object-center opacity-90'
+                  />
+                </div>
+                <div className='flex flex-col md:gap-2'>
+                  <span className='text-sm text-slate-200'>
+                    {news.label}
+                  </span>
+                  <span className='text-xs'>
+                    {news.date}
+                  </span>
+                </div>
+              </div>
+            ))}
+
           </div>
         </div>
       </div>
